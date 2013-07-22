@@ -57,7 +57,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 function checkUrl(url, checksfile, cb){
-//         console.log(url);
+
         require('restler').get( url).on('complete', function(result){
            if(result instanceof Error ){ console.log("Please check url."); }
             var $ =  cheerio.load(result);
